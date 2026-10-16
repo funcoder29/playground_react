@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 
 const marks = Array.from({ length: 50000 }, (_, index) => index % 101);
 
-function calculateTotalWithoutMemo(marks) {
+function calculateTotalWithReactCompiler(marks) {
   const start = performance.now();
   let total = 0;
 
@@ -19,13 +19,13 @@ function calculateTotalWithoutMemo(marks) {
 const Dashboard = () => {
   const [theme, setTheme] = useState("light");
 
-  const totalWithoutMemo = calculateTotalWithoutMemo(marks);
+  const totalWithCompiler = calculateTotalWithReactCompiler(marks);
 
   return (
     <div className={theme}>
       <h2>Student Dashboard</h2>
 
-      <p>Total marks without memo: {totalWithoutMemo}</p>
+      <p>Total marks: {totalWithCompiler}</p>
 
       <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
         Change theme
