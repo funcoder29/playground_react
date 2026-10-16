@@ -1,6 +1,6 @@
 # This project demonstrate why memoization is important for performance optimization
-# Running the project at localhost
-Run Project:
+
+Running the project at localhost:
 Go to the root directory and run below command
 npm run dev
 
